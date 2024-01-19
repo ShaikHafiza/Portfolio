@@ -10,9 +10,6 @@ body {
 .name{
     color:#29A0B1;
 }
-.cursor{
-    cursor: default;
-}
 
 #nav-right{
     position: absolute;
@@ -106,7 +103,7 @@ section .main{
 .text{
     color:#98D7C2;
     position: relative;
-    background-image: url(mountain6.jpeg);
+    background-image: url("./Portfolio Photos/mountain6.jpeg");
     background-size: cover;
     background-clip: text;
     -webkit-background-clip: text;
@@ -136,16 +133,12 @@ section .main{
 }
 
 
-/*home page styling end*/
 
-
-
-/*Projects styling start*/
-
+/*projects section*/
 #projects
 {
-    background-color:#3E5C76;
     height: fit-content;
+    background-image: linear-gradient(60deg, #05627e 0%, #0a7551 100%);
 }
 
 #projects .project-container
@@ -153,17 +146,19 @@ section .main{
     flex-direction: column;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 3rem 0;
+    padding: 100px 0;
 }
 
 .project-title h1{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 2rem;
+    padding-top: 3rem;
     padding-bottom: 2rem;
     font-size: 4rem;
+    color: #070301;
 }
+
 
 .all-projects
 {
@@ -171,6 +166,9 @@ section .main{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding-bottom: 3rem;
+    border-radius: 0.75rem;
+    color: #94A684;
 }
 .project-item
 {
@@ -181,8 +179,6 @@ section .main{
     width: 90%;
     margin: auto;
     overflow: hidden;
-    padding-bottom: 2rem;
-    border-radius: 0.75rem;
     height: 21.875rem;
 }
 
@@ -197,6 +193,7 @@ section .main{
     height: 100%;
 }
 
+
 .project-info
 {
     display: flex;
@@ -206,7 +203,7 @@ section .main{
     flex-basis: 50%;
     height: 100%;
     padding: 2.8rem;
-    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    background-image: linear-gradient(60deg, #053d7e 0%, #62a860 100%);
 	color: white;
 }
 .project-info h1
@@ -220,16 +217,14 @@ section .main{
     margin-top: 10px;
     font-weight: 500;
 }
-
 .project-img img
 {
     flex-basis: 50%;
-    height: 20rem;
+    height: 21.875rem;
     overflow: hidden;
     position: relative;
 
 }
-
 #projects .project-img:after {
 	content: '';
 	position: absolute;
@@ -242,87 +237,184 @@ section .main{
 }
 #projects .project-img img {
 	transition: 0.3s ease transform;
+    filter: grayscale(50%);
 }
-
 #projects .project-item:hover .project-img img {
 	transform: scale(1.1);
+    filter: grayscale(0%);
 }
-/*projects styling end*/
 
 
 
 /*About styling start*/
 
-#about{
-    background-color: #748CAB;
+
+#about
+{
+    height: 100vh;
+    background-color: #E4E4D0;
+    background-image: linear-gradient(60deg, #a790c0 0%, #62bfea 100%);
+}
+#about .about
+{
     display: flex;
     flex-direction: row;
-    padding: 50px 10px 10px 10px;
+    justify-content: center;
+	align-items:center;
+	margin: 0 auto;
+	padding: 6.25rem 1.25rem;
+    padding-top: 1rem;
 }
 
-.image{
-    width: 350px;
-    border: 7px solid whitesmoke;
-    border-radius: 25px;
-    padding: 20px;
-    margin: 20px;
-  }
-  
-.image img {
-    width: 98%;
-    border-radius: 25px;
-}
-
-.about-data{
-    position: relative;
-    top:50px;
-    left: 50px;
-}
-
-.about-data h1{
+.about-info h1{
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    padding-top:0;
+    padding-bottom: 2rem;
     font-size: 4rem;
+    color: #100f0e;
+}
+
+.about-info h2{
+    color: #100f0e;
+    font-size: 2.0rem;
 	font-weight: 500;
 	letter-spacing: 0.2rem;
 	margin-bottom: 10px;
 }
 
-.about-data h2{
-    font-size: 2rem;
-	font-weight: 500;
-	letter-spacing: 0.2rem;
+.about span{
+    color: #94A684;
+}
+#about .col-left {
+	width: 250px;
+	height: 350px;
+    margin-top: 1rem;
+    margin-right: 7.5rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+#about .col-right {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+	width: 46.875rem;
+    justify-content:right;
+    align-items:center;
+}
+#about img
+{
+    height: 27rem;
+    width: 20rem;
+    border: 0.75rem solid #94A684;
+    padding: 1rem;
+    margin: 1rem;
+    margin-right: 3rem;
+}
+
+#about .col-right p {
+	margin-bottom: 20px;
+}
+
+#about .col-left .about-img {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	border: 0.75rem solid #3D322C;
+}
+
+
+
+
+/*contact section*/
+#contact
+{
+    background-image: linear-gradient(60deg, #a9a3af 0%, #bbcbe4 100%);
+    color: #3D322C;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.contact-head h1{
+    font-size: 4rem;
+}
+
+#contact .contact-items
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.contact-item
+{
+    width: 50%;
+	text-align: center;
+	border-radius: 10px;
+	padding: 30px;
+	margin: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	box-shadow: 0.5rem 0.5rem 2rem 0 #6756562c;
+	transition: 0.3s ease box-shadow;
+}
+
+.contact-item:hover
+{
+    box-shadow: 0px 0px 0.5rem 0 #0000002c;
+    cursor: pointer;
+}
+
+#contact .contact-icon img{
+	width: 70px;
 	margin-bottom: 10px;
 }
 
-.about-data a{
-    position: relative;
-    top: 30px;
-    left:50px;
+.contact-info
+{
+    padding-left: 1rem;
 }
 
-.resume{
-    color: black;
-	margin-bottom: 50px;
-	padding: 10px 20px;
-	font-size: 2rem;
+#contact .contact-info h1 {
+	font-size: 1.5rem;
+	font-weight: 500;
+	margin-bottom: 5px;
+}
+#contact .contact-info h2 {
+	font-size: 1rem;
+	line-height: 2rem;
+	font-weight: 500;
+}
+
+
+/*footer styling start*/
+
+  .footer {
+    background-color: #333;
+    color: #fff;
+    padding-top: 20px;
+    text-align: center;
+    bottom: 0;
+  }
+
+  .footer p {
+    margin: 0;
+    font-size: 16px;
+  }
+
+  .footer a {
+    color: #fff;
     text-decoration: none;
-    border: 2px solid black;
-    border-radius: 30px;
-    background-color:#b7b7b7;
-}
+    margin: 0 10px;
+  }
 
-.resume:hover{
-    background-color: white;
-}
-
-/*about styling end*/
-
-
-
-
-/*contact styling start*/
-
-#contact{
-    background-color: #b7b7b7;
-}
-
-
+  .footer a:hover {
+    text-decoration: underline;
+  }
